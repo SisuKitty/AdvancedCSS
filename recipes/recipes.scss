@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+$primary-color: #1B98E0;
+$secondary-color: #59c3c3;
+$text-dark: #333;
+$text-light: #ebebeb;
+$text-mid: #a7a7a7;
+$primary-font: Arial, Helvetica, sans-serif;
+$header: "Lora";
+
+
+//mixin styles
+@mixin list-fix() {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+@mixin link-fix() {
+    color: black;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, nav a {
+    font-family: $header;
+}
+
+a {
+    text-decoration: none;
+    @include link-fix();
+}
+
+h2 a {
+    color: $text-mid;
+}
+
+li {
+    @include list-fix();
+    text-transform: uppercase;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: right;
+}
+
+li, p {
+    a {
+        @include list-fix();
+    }
+}
+
+body {
+    display: grid;
+}
+
+nav {
+    border-top: #d0d0d0 solid 1px;
+    border-bottom: #d0d0d0 solid 1px;
+}
+
+h1 {
+    font-size: 65px;
+    text-align: center;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 10px;
+}
+
+.post-date {
+    text-transform: uppercase;
+    text-align: right;
+    border-right: #d0d0d0 solid 1px;
+    padding: 10px;
+}
+
+img {
+    width: 30%;
+}
+
+li a:hover {
+    color: #00ddff;
+}
+
+@media screen and (max-width:500px) {
+    #recipe-book-img {
+        width: 1em;
+        height: 1em;
+    }
+
+    .social {
+        width: 20em;
+    }
+
+    article {
+        display: block;
+    }
+
+    .recipe {
+        display: flex;
+        flex-wrap: wrap;
+        &-photo {
+            width: 50%;
+        }
+    }
+
+    figure {
+        width: 100%;
+        margin-left: 25%;
+    }
+
+    .post-date {
+    text-transform: uppercase;
+    text-align: right;
+    border-bottom: #d0d0d0 solid 1px;
+    }
+
+    ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: right;
+    margin-left: -15%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    li {
+    list-style-type: none;
+    display: grid;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .5em;
+}
+}
