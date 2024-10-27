@@ -1,0 +1,55 @@
+.line {
+    display: block;
+    background-color: black;
+    height: 2px;
+    width: 50px;
+    margin: 10px 0;
+    transition: all 0.5s ease;
+}
+
+body {
+    display: flex;
+    gap: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu-icon {
+    margin-top: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-icon.open .line {
+    background-color: white; /* Changes color to white */
+}
+
+.menu-icon.open .line:nth-child(1) {
+  transform: translateY(12px) translateX(100px) rotate(45deg);
+}
+
+.menu-icon.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .line:nth-child(3) {
+  transform: translateY(-12px) translateX(100px) rotate(-45deg);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 1000; /* Higher value brings it to the front */
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  margin-left: -200px;
+  transition: all 0.5s ease;
+}
+
+.nav-bar.open {
+margin-left: 0;
+}
