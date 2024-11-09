@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <article class="cart">
+  <div class="cart__header">
+  <h1 class="cart__name">Your Cart</h1>
+  <div class="cart__count">3</div>
+  </div>
+  
+  <article class="cart__items">
+    <div class="cart__item">
+      <div class="cart__item__info">
+        <h2 class="cart__item__info__title">Product Name</h2>
+        <p class="cart__item__info__description">Brief Description</p>
+      </div>
+      <p class="cart__item__price">$12</p>
+    </div>
+    
+    <div class="cart__item">
+      <div class="cart__item__info">
+        <h2 class="cart__item__info__title">Second Product</h2>
+        <p class="cart__item__info__description">Brief Description</p>
+      </div>
+      <p class="cart__item__price">$8</p>
+    </div>
+    
+    <div class="cart__item">
+      <div class="cart__item__info">
+        <h2 class="cart__item__info__title">Third Item</h2>
+        <p class="cart__item__info__description">Brief Description</p>
+      </div>
+      <p class="cart__item__price">$5</p>
+    </div>
+    
+    <div class="cart__item code">
+      <div class="cart__item__info discount">
+        <h2 class="cart__item__info__title discount__name">Promo Code</h2>
+        <p class="cart__item__info__description discount__code">EXAMPLECODE</p>
+      </div>
+      <p class="cart__item__price discount__price">-$5</p>
+    </div>
+    
+    <div class="cart__item">
+      <h2 class="cart__item__info__title">Total (USD)</h2>
+      <p class="cart__item__price">$20</p>
+    </div>
+  </article>
+  <article class="promo">
+    <form class="promo__input">
+      <input type="text" class="promo__input__placeholder" placeholder="Promo Code">
+      <button class="promo__input__submit" type="submit">Redeem</button>
+    </form>
+  </article>
+  </body>
+</html>

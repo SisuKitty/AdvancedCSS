@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Center nav content */
+  padding: 20px 10px; /* Space inside to center vertically */
+  margin: 0 100px; /* Responsive space on the right and left */
+  border-top: 2px solid purple;  /* Purple border on top */
+  border-right: 2px solid purple; /* Purple border on right */
+  border-left: 2px solid blue; /* Blue border on left */
+  border-bottom: 2px solid blue; /* Blue border on bottom */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+ul {
+  display: flex;
+  list-style: none; /* Remove list style */
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Evenly space items */
+}
+
+li {
+  margin: 0;
+}
+
+a {
+  color: white; /* White text */
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+a:hover {
+  background-color: #333; /* Optional: Background change on hover */
+  color: white;
+}
+
+@media (max-width: 800px) {
+  nav {
+    margin: 0 10px; /* Reduce side margin on smaller screens */
+    padding: 15px 5px; /* Adjust internal padding */
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    margin: 0 5px; /* Further reduce side margin on very small screens */
+    padding: 10px 3px; /* Adjust internal padding */
+  }
+}
